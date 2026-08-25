@@ -10,10 +10,8 @@ from schemas import (
     ResponseMessage,
     Usage,
 )
-
 app = FastAPI()
 MODEL_ID = "Qwen/Qwen2.5-0.5B-Instruct"
-
 print("Loading model and tokenizer...")
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
 model = AutoModelForCausalLM.from_pretrained(MODEL_ID)
@@ -67,3 +65,4 @@ async def chat_completions(req: ChatCompletionRequest):
             total_tokens=prompt_tokens + completion_tokens,
         ),
     )
+# Cache invalidation test
