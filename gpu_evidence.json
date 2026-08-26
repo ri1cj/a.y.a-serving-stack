@@ -1,0 +1,6 @@
+{
+    "gpu_available": true,
+    "device": "cuda",
+    "device_name": "Tesla T4",
+    "status": "PASS"
+}
